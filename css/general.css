@@ -19,10 +19,8 @@ html {
 .menu_list {
 
     display: flex;
-    gap: 100px;
+    gap: 200px;
     list-style: none;
-    
-   
 }
 
 
@@ -36,17 +34,19 @@ html {
 
 .icon {
 
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 li{
     display: flex;
     flex-direction: column;
     text-align: center;
     text-decoration: none;
-
+    
 
 }
 a{
     text-decoration: none;
+    font-family: "Saira Stencil", sans-serif;
+    font-size: 20px;
 }
