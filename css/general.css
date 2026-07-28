@@ -12,25 +12,19 @@ html {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
+    background-color: bisque;
+    border: solid black;
 }
 
 .menu_list {
 
     display: flex;
-    width: 300px;
-    height: 300px;
-    gap: 35px;
+    gap: 100px;
+    list-style: none;
+    
+   
 }
 
-.perfil {
-
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border: solid black;
-    object-position: top;
-    border-radius: 50%;
-}
 
 .logo {
     display: flex;
@@ -38,4 +32,21 @@ html {
     height: 40px;
     flex-direction: column;
     align-items: center;
+}
+
+.icon {
+
+    width: 40px;
+    height: 40px;
+}
+li{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+
+
+}
+a{
+    text-decoration: none;
 }
