@@ -1,0 +1,41 @@
+
+
+.titulo{
+
+    text-align: center;
+    font-size: 40px;
+    font-family: "Kameron", serif;
+}
+
+.icon_school {
+    
+    width: 800px;
+    height: 800px;
+    margin: 50px 70px;
+    color: white;
+    border: 5px solid rgb(250, 250, 250);
+    box-shadow: 0px 0px 40px rgb(247, 247, 247);
+    border-radius: 20%;
+    
+}
+
+.list_estudio {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    font-size: 30px;
+    margin: 10rem 19rem;
+    font-family: "Saira Stencil", sans-serif;
+    color: white;
+    transition: .4s ease-in-out;
+    margin: 90px 70px;
+    margin-top: -50px;
+    border: 5px solid red;
+}
+
+h2 {
+
+    font-family: "Kameron", serif;
+}
