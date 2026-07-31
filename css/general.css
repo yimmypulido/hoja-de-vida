@@ -98,6 +98,7 @@ footer {
     justify-content: end;
     align-items: center;
     padding: 25px 0px;
+    font-family: "Smooch Sans", sans-serif;
 }
 
 .foot {
@@ -105,3 +106,4 @@ footer {
     color: white;
     font-size: 20px;
 }
+

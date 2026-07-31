@@ -94,6 +94,7 @@ button {
     font-family: "Montenegrin Gothic One", serif;
     padding: 30px;
     margin: 0px 50px ;
+    font-size: 3rem;
 
 
 
@@ -101,11 +102,12 @@ button {
 
 input::placeholder {
    background-color: white;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 20px;
+    font-size: 3rem;
     height: 600px;
     border-radius: 10%;
+    font-family: "Montenegrin Gothic One", serif;
 
 }
 
@@ -118,7 +120,6 @@ button:hover {
 
     text-align: center;
     height: 4000px;
-    font-size: 900px;
 }
 
 
