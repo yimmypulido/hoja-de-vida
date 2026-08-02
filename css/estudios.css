@@ -1,4 +1,9 @@
 
+.container {
+    
+    flex-wrap: wrap;
+    
+}
 
 .titulo{
 
@@ -7,23 +12,20 @@
     font-family: "Kameron", serif;
 }
 
-
-.container {
+.card {
 
     display: flex;
-    
+    justify-content: center;
 }
 
 .icon_school {
     
-    width: 800px;
-    height: 800px;
-    margin: 50px 70px;
+    margin-top: 25px;
+    margin-left: 450px;
     color: rgb(253, 251, 251);
     border: 5px solid rgb(250, 250, 250);
     box-shadow: 0px 0px 40px rgb(247, 247, 247);
     border-radius: 20%;
-    
     
 }
 
@@ -31,14 +33,11 @@
     
     display: flex;
     flex-direction: column;
-    justify-content: end;
     font-size: 25px;
-    margin: 10rem 19rem;
     font-family: "Saira Stencil", sans-serif;
     color: rgb(245, 245, 245);
     transition: .4s ease-in-out;
     margin: 90px 70px;
-    width: 80rem;
     border: 5px transparent rgb(250, 250, 250);
 }
 
@@ -58,7 +57,7 @@
 h2 {
 
     font-family: "Kameron", serif;
-     text-decoration: underline rgb(255, 252, 252);
+    text-decoration: underline rgb(255, 252, 252);
 }
  
 .list_trabajo {
@@ -66,7 +65,7 @@ h2 {
     
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    
     font-size: 25px;
     font-family: "Saira Stencil", sans-serif;
     color: rgb(245, 245, 245);

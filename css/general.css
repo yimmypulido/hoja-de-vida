@@ -34,8 +34,10 @@ html {
 } */
 
 .hero {
+    
     flex-wrap: wrap;
 }
+
 
 .menu {
     padding: 10px 20px;
