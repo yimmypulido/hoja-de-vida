@@ -1,103 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <meta name="description" content="Portafolio de Yimmy Alexander Pulido Gaona — Desarrollador de software: proyectos, estudios y contacto.">
+    <meta name="theme-color" content="#0a0a0b">
+    <title>Yimmy A. Pulido — Portafolio · Desarrollador de software</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Montenegrin+Gothic+One&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    
-    <header class="header">
 
-        <nav class="menu">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
 
-            <img class="logo" src="./img/logo.svg" alt="Logo de la pagina">
-            
-            <ul class="menu_list">
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <span class="preloader__text">Yimmy.dev</span>
+        <div class="preloader__bar"><i></i></div>
+    </div>
 
-                <li>
-                   <img class="icon" src="./img/home.svg"  alt="icono home"> <a  href="./index.html" class="menu_link">Home</a>
-                   
-                </li>
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+        <div class="nav__inner container">
+            <a class="nav__logo" href="./index.html" aria-label="Inicio">
+                <img class="nav__logo-img" src="./img/logo.svg" alt="Logo de Yimmy Pulido">
+                <span class="nav__logo-text">Yimmy<small>.dev</small></span>
+            </a>
 
-                <li>
-                   <img class="icon" src="./img/estudios.svg" alt="icono estudios"> <a  href="./html/estudios.html" class="menu_link">Estudios</a>
-                   
-                </li>
+            <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
+                <a class="nav__link" href="./index.html">Inicio</a>
+                <a class="nav__link" href="./html/estudios.html">Estudios</a>
+                <a class="nav__link" href="./html/gallery.html">Proyectos</a>
+                <a class="nav__link" href="./html/contacto.html">Contacto</a>
+            </nav>
 
-                <li>
-                   <img class="icon" src="./img/gallery.svg" alt="icono galeria"> <a href="./html/gallery.html" class="menu_link">Proyectos</a>
-                </li>
-
-                <li>
-                 <img class="icon" src="./img/contact.svg" alt="icono contacto">  <a href="./html/contacto.html" class="menu_link">Contacto</a>
-                </li>
-
-            </ul>
-        </nav>
-
+            <div class="nav__actions">
+                <a class="btn btn--red btn--sm" href="./html/contacto.html">Escríbeme</a>
+                <button class="nav__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <main id="main">
 
-        <section class="hero">
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="inicio">
+            <div class="hero__bg" aria-hidden="true">
+                <div class="hero__beams"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="hero__glow"></div>
+                <div class="hero__noise"></div>
+                <div class="hero__vignette"></div>
+            </div>
 
-        <div class="card">
-        <img class="img_portada" src="../img/WhatsApp Image 2026-08-01 at 6.55.30 PM.jpeg" alt="foto de portada">
-        <h1>Yimmy Alexander Pulido Gaona </h1>
-        <p class="hero_text">Diseñador, Desarrollador y Dibujante como hobbie</p>
+            <div class="hero__inner container">
+                <div class="hero__content">
+                    <p class="hero__eyebrow" data-reveal><span class="dot"></span> // Hola, mundo</p>
+
+                    <h1 class="hero__name" data-reveal>Yimmy Alexander<span>Pulido Gaona</span></h1>
+
+                    <p class="hero__role" data-reveal>
+                        &gt; Desarrollador de software
+                        <span class="typed" data-typed='["Frontend", "Backend", "Web Apps", "Interfaces"]'>Frontend</span><span class="cursor" aria-hidden="true"></span>
+                    </p>
+
+                    <p class="hero__text" data-reveal>
+                        Construyo experiencias web funcionales, responsivas y con código limpio.
+                        Me mueve el equilibrio entre el diseño y la lógica: interfaces que se ven bien
+                        y funcionan aún mejor.
+                    </p>
+
+                    <div class="hero__actions" data-reveal>
+                        <a class="btn btn--red btn--lg" href="./html/gallery.html">Ver proyectos</a>
+                        <a class="btn btn--ghost btn--lg" href="./html/contacto.html">Contáctame</a>
+                    </div>
+
+                    <div class="hero__facts" data-reveal>
+                        <div class="fact">
+                            <strong>Front + Back</strong>
+                            <span>Enfoque</span>
+                        </div>
+                        <div class="fact">
+                            <strong>Angular · Node</strong>
+                            <span>Stack principal</span>
+                        </div>
+                        <div class="fact">
+                            <strong>Colombia</strong>
+                            <span>Ubicación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__media" data-reveal data-delay="140">
+                    <div class="hero__frame">
+                        <img src="./img/WhatsApp Image 2026-08-01 at 6.55.30 PM.jpeg" alt="Retrato de Yimmy Alexander Pulido Gaona">
+                        <span class="hero__badge">Disponible para proyectos</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#sobre-mi" class="hero__scroll" aria-label="Desplazarse">
+                <span></span>Scroll
+            </a>
+        </section>
+
+        <!-- ============ MARQUEE ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>HTML · CSS · JAVASCRIPT · TYPESCRIPT <i>★</i> ANGULAR · REACT · NODE.JS <i>★</i> MONGODB · GIT &amp; GITHUB <i>★</i> FRONTEND + BACKEND <i>★</i> </span>
+                <span>HTML · CSS · JAVASCRIPT · TYPESCRIPT <i>★</i> ANGULAR · REACT · NODE.JS <i>★</i> MONGODB · GIT &amp; GITHUB <i>★</i> FRONTEND + BACKEND <i>★</i> </span>
+            </div>
         </div>
 
-        <div class="_perfil">
+        <!-- ============ TERMINAL ============ -->
+        <section class="section--tight container" data-reveal>
+            <div class="terminal">
+                <div class="terminal__bar">
+                    <i></i><i></i><i></i>
+                    <span>yimmy@portafolio: ~</span>
+                </div>
+                <div class="terminal__body">
+                    <p class="cmd">whoami</p>
+                    <p class="out"><b>Yimmy Alexander Pulido Gaona</b> — desarrollador de software en formación.</p>
+                    <p class="cmd">cat stack.txt</p>
+                    <p class="out">HTML · CSS · JavaScript · Angular · React · Node.js · MongoDB · Git</p>
+                    <p class="cmd">cat objetivo.md</p>
+                    <p class="out">Crear productos web cómodos, innovadores e inclusivos para todos los usuarios.</p>
+                </div>
+            </div>
+        </section>
 
-            
-                <ul class="habilidades"> 
-                    
-                    <li> 
-                    <h2 class="subtitulo">habilidades</h2> 
-                    <p> Html </p> 
-                      <p> Css </p> 
-                      <p> Git hub </p> 
-                      <p> Visual Studio Code </p> 
-                      <p> Creativo </p> 
-                      <p> Responsable </p> </li>          
-                </ul>
+        <!-- ============ SOBRE MÍ ============ -->
+        <section class="section" id="sobre-mi">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <p class="section__eyebrow"><span class="dot"></span> 01 · Sobre mí</p>
+                    <h2 class="section__title">Un poco más <span class="accent">acerca de mí</span></h2>
+                    <p class="section__desc">Perfil técnico con creatividad de diseñador y dibujante: la tecnología, mi forma de construir cosas útiles.</p>
+                </header>
 
-                 <ul class="objetivos"> 
+                <div class="features">
+                    <article class="feature" data-reveal>
+                        <span class="feature__num">01</span>
+                        <div class="feature__icon">&lt;/&gt;</div>
+                        <h3>Objetivos</h3>
+                        <p>
+                            Perfeccionar mis habilidades como desarrollador web y dominar las tecnologías
+                            que me permitan crear páginas cómodas, rápidas e innovadoras para todos los usuarios.
+                        </p>
+                    </article>
 
-                    <li> 
-                        <h2 class="subtitulo">objetivos</h2>
-                        <p> 
-                        Perfeccionar mis habilidades como Desarrollador
-                        web y con el manejo de la tecnologia para crear paginas comodas e inovadoras para todos los usuarios.
-                        </p> 
-                        
-                    </li>
+                    <article class="feature" data-reveal data-delay="120">
+                        <span class="feature__num">02</span>
+                        <div class="feature__icon">AI</div>
+                        <h3>Intereses</h3>
+                        <p>
+                            Las nuevas tecnologías y la inteligencia artificial aplicadas al desarrollo web,
+                            para innovar y resolver problemas reales con soluciones más inteligentes.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                 </ul>
-                
-                 <ul class="intereses"> 
-                    
-                    <li>
+        <!-- ============ HABILIDADES ============ -->
+        <section class="section section--alt" id="habilidades">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <p class="section__eyebrow"><span class="dot"></span> 02 · Habilidades</p>
+                    <h2 class="section__title">Tecnologías y <span class="accent">herramientas</span></h2>
+                    <p class="section__desc">El conjunto de tecnologías con las que trabajo y aprendo cada día.</p>
+                </header>
 
-                      <h2 class="subtitulo">intereses</h2>
-                      <p> Me interesa bastante nuevas teconlogias, ia ; para poder desarrollar e inovar mejor en las paginas web. </p> 
+                <div class="skills-grid">
+                    <div class="skill-group" data-reveal>
+                        <h3>Lenguajes y web</h3>
+                        <ul class="chips">
+                            <li class="chip">HTML5</li>
+                            <li class="chip">CSS3</li>
+                            <li class="chip">JavaScript</li>
+                            <li class="chip">TypeScript</li>
+                        </ul>
+                    </div>
 
-                    </li>
-                </ul>
-        </div>    
-             </section>
-   
+                    <div class="skill-group" data-reveal data-delay="120">
+                        <h3>Frameworks y backend</h3>
+                        <ul class="chips">
+                            <li class="chip">Angular</li>
+                            <li class="chip">React</li>
+                            <li class="chip">Node.js</li>
+                            <li class="chip">MongoDB</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group" data-reveal data-delay="240">
+                        <h3>Herramientas y soft skills</h3>
+                        <ul class="chips">
+                            <li class="chip">Git &amp; GitHub</li>
+                            <li class="chip">VS Code</li>
+                            <li class="chip">Creatividad</li>
+                            <li class="chip">Responsabilidad</li>
+                            <li class="chip">Trabajo en equipo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PROYECTOS DESTACADOS ============ -->
+        <section class="section">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <p class="section__eyebrow"><span class="dot"></span> 03 · Proyectos</p>
+                    <h2 class="section__title">Trabajos <span class="accent">destacados</span></h2>
+                    <p class="section__desc">Una selección de lo que he construido y estoy construyendo.</p>
+                </header>
+
+                <div class="preview-grid">
+                    <article class="preview" data-reveal>
+                        <div class="preview__thumb">
+                            <span class="preview__tag">Web</span>
+                            <img src="./img/proyecto1.png" alt="Captura del desarrollo de la página de portafolio">
+                        </div>
+                        <div class="preview__body">
+                            <h3>Portafolio personal</h3>
+                            <p>Sitio multipágina con diseño responsive, animaciones y navegación en HTML, CSS y JavaScript.</p>
+                            <span class="preview__link">HTML · CSS · JS</span>
+                        </div>
+                    </article>
+
+                    <article class="preview" data-reveal data-delay="120">
+                        <div class="preview__thumb">
+                            <span class="preview__tag preview__tag--soft">Hobby</span>
+                            <span class="project__placeholder">✎</span>
+                        </div>
+                        <div class="preview__body">
+                            <h3>Dibujo e ilustración</h3>
+                            <p>Dibujos y bocetos digitales: mi forma de mantener viva la creatividad fuera del código.</p>
+                            <span class="preview__link">Arte digital</span>
+                        </div>
+                    </article>
+
+                    <article class="preview" data-reveal data-delay="240">
+                        <div class="preview__thumb">
+                            <span class="preview__tag preview__tag--soft">Próximamente</span>
+                            <span class="project__placeholder">&lt;/&gt;</span>
+                        </div>
+                        <div class="preview__body">
+                            <h3>Nuevos proyectos</h3>
+                            <p>Aplicaciones web con Angular, Node.js y MongoDB actualmente en desarrollo.</p>
+                            <span class="preview__link">En construcción</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-cta">
+                    <a class="btn btn--ghost btn--lg" href="./html/gallery.html">Ver todos los proyectos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="section--tight container">
+            <div class="cta" data-reveal>
+                <div class="cta__glow" aria-hidden="true"></div>
+                <div class="cta__text">
+                    <h2>¿Tienes una idea? Construyámosla.</h2>
+                    <p>Estoy abierto a prácticas, proyectos freelance y oportunidades para seguir creciendo como desarrollador.</p>
+                </div>
+                <a class="btn btn--red btn--lg" href="./html/contacto.html">Escríbeme</a>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="./img/logo.svg" alt="">
+                        <span>Yimmy.dev</span>
+                    </div>
+                    <p class="footer-text">
+                        Portafolio de Yimmy Alexander Pulido Gaona — Desarrollador de software.
+                        Diseño y construyo experiencias web.
+                    </p>
+                </div>
 
-         <p class="foot">Email: yimmy120alexander@hotmail.com,  Telefono: 3209394803   </p> 
+                <div>
+                    <h3 class="footer-title">Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./html/estudios.html">Estudios</a></li>
+                        <li><a href="./html/gallery.html">Proyectos</a></li>
+                        <li><a href="./html/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <span>
+                                yimmy120alexander@hotmail.com
+                                <button class="copy-btn" type="button" data-copy="yimmy120alexander@hotmail.com">copiar</button>
+                            </span>
+                        </li>
+                        <li><a href="tel:+573209394803">+57 320 939 4803</a></li>
+                        <li><a href="https://wa.me/573209394803" target="_blank" rel="noopener">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span data-year>2026</span> Yimmy A. Pulido Gaona — Todos los derechos reservados.</p>
+                <p><span class="dot">●</span> Hecho con HTML, CSS y JavaScript</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- ============ TOAST ============ -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ============ TO TOP ============ -->
+    <button class="totop" id="toTop" type="button" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+    </button>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -1,138 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <meta name="description" content="Formación académica y experiencia laboral de Yimmy Alexander Pulido Gaona.">
+    <meta name="theme-color" content="#0a0a0b">
+    <title>Estudios · Yimmy A. Pulido — Portafolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Montenegrin+Gothic+One&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./../css/estudios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/estudios.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    
-    <header class="header">
 
-        <nav class="menu">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
 
-            <img class="logo" src="./../img/logo.svg" alt="">
-            
-            <ul class="menu_list">
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <span class="preloader__text">Yimmy.dev</span>
+        <div class="preloader__bar"><i></i></div>
+    </div>
 
-                <li>
-                   <img class="icon" src="./../img/home.svg" alt="icono home"> <a  href="../index.html" class="menu_link">Home</a>
-                   
-                </li>
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+        <div class="nav__inner container">
+            <a class="nav__logo" href="../index.html" aria-label="Inicio">
+                <img class="nav__logo-img" src="../img/logo.svg" alt="Logo de Yimmy Pulido">
+                <span class="nav__logo-text">Yimmy<small>.dev</small></span>
+            </a>
 
-                <li>
-                   <img class="icon" src="./../img/estudios.svg" alt="icono estudios"> <a  href="./estudios.html" class="menu_link">Estudios</a>
-                   
-                </li>
+            <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
+                <a class="nav__link" href="../index.html">Inicio</a>
+                <a class="nav__link" href="./estudios.html">Estudios</a>
+                <a class="nav__link" href="./gallery.html">Proyectos</a>
+                <a class="nav__link" href="./contacto.html">Contacto</a>
+            </nav>
 
-                <li>
-                   <img class="icon" src="./../img/gallery.svg" alt="icono galeria"> <a href="./gallery.html" class="menu_link">Proyectos</a>
-                </li>
-
-                <li>
-                 <img class="icon" src="./../img/contact.svg" alt="icono contacto">  <a href="./contacto.html" class="menu_link">Contacto</a>
-                </li>
-
-            </ul>
-        </nav>
-
+            <div class="nav__actions">
+                <a class="btn btn--red btn--sm" href="./contacto.html">Escríbeme</a>
+                <button class="nav__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <main id="main">
 
- <h1 class="titulo">Mis estudios</h1>
-   
-   <section class="container">
+        <section class="page-head container" data-reveal>
+            <p class="section__eyebrow"><span class="dot"></span> Trayectoria</p>
+            <h1 class="section__title">Mis <span class="accent">estudios</span></h1>
+            <p class="section__desc">Formación académica, certificaciones y experiencia profesional que respaldan mi camino como desarrollador de software.</p>
+        </section>
 
-    <img class="icon_school" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_VBn_rHauDs0_8jdjT5a_u_WTIbMkqEeiCl87ov6VZA&s=10" alt="">
-   <div class="estudio">
-    <ul class="card">
+        <section class="section">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <p class="section__eyebrow"><span class="dot"></span> Educación</p>
+                    <h2 class="section__title">Formación <span class="accent">académica</span></h2>
+                </header>
 
-        <l1 class="list_estudio">
+                <div class="timeline">
 
-            <h2>Mecanica automotriz</h2>
-            <p>lugar: Campoalto </p>
-            <p>Tiempo de inicio: 2025</p>
-            <p>fecha de inicializacion: No completado</p>
-            
-        </l1>
-        <l1 class="list_estudio">
+                    <article class="tl" data-reveal>
+                        <div class="tl__year">2025 — Actualidad</div>
+                        <div class="tl__body">
+                            <h3>Desarrollo Web</h3>
+                            <p>Instituto Bit — Formación en desarrollo web front-end y back-end.</p>
+                            <ul class="meta">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Angular</li>
+                            </ul>
+                            <p class="tl__status"><span class="status status--progress">● Cursando</span></p>
+                        </div>
+                    </article>
 
-           <h2>Desarrollo Web</h2>
-            <p>lugar: Bit </p>
-            <p>Cursando </p>
-          
+                    <article class="tl" data-reveal data-delay="100">
+                        <div class="tl__year">2025</div>
+                        <div class="tl__body">
+                            <h3>Mecánica automotriz</h3>
+                            <p>Campoalto — Programa técnico. Formación complementaria en el área industrial y técnica.</p>
+                            <p class="tl__status"><span class="status">○ En pausa</span></p>
+                        </div>
+                    </article>
 
-        </l1>
-        <l1 class="list_estudio">
+                    <article class="tl" data-reveal data-delay="180">
+                        <div class="tl__year">2022</div>
+                        <div class="tl__body">
+                            <h3>Certificado en manejo y uso de Revit</h3>
+                            <p>Macrotec Training Center — Certificación en modelado de información y diseño asistido por computadora.</p>
+                            <p class="tl__status"><span class="status status--done">✓ Completado</span></p>
+                        </div>
+                    </article>
 
-            <h2> Fundamentos En Diseño</h2>
-            <p>lugar: Sena </p>
-            <p>Tiempo de inicio: 2020</p>
-            <p>fecha de inicializacion: 2021</p>
+                    <article class="tl" data-reveal data-delay="260">
+                        <div class="tl__year">2020 — 2021</div>
+                        <div class="tl__body">
+                            <h3>Fundamentos en diseño</h3>
+                            <p>SENA — Base en principios de composición, color y diseño visual aplicado.</p>
+                            <ul class="meta">
+                                <li>Diseño</li>
+                                <li>Composición</li>
+                                <li>Colorimetría</li>
+                            </ul>
+                            <p class="tl__status"><span class="status status--done">✓ Completado</span></p>
+                        </div>
+                    </article>
 
-        </l1>
+                </div>
+            </div>
+        </section>
 
-         <l1 class="list_estudio">
+        <section class="section section--alt">
+            <div class="container">
+                <header class="section__head" data-reveal>
+                    <p class="section__eyebrow"><span class="dot"></span> Trabajo</p>
+                    <h2 class="section__title">Experiencia <span class="accent">laboral</span></h2>
+                </header>
 
-            <h2>Certificado Manejo y Uso De Revit</h2>
-            <p>Macrotec training center </p>
-            <p>Tiempo de inicio: 2022</p>
-            <p>fecha de inicializacion: 2022</p>
-            
-        </l1>
+                <div class="jobs">
 
-    </ul>
+                    <article class="job" data-reveal>
+                        <h3 class="job__role">Desarrollador Web Jr</h3>
+                        <p class="job__company">Nuawi</p>
+                        <ul>
+                            <li>Desarrollo de interfaces y lógica de servidor.</li>
+                            <li>Jefe inmediato: Daniel Millán.</li>
+                            <li>Tecnologías: Angular, React, Node.js y MongoDB.</li>
+                        </ul>
+                    </article>
 
+                    <article class="job" data-reveal data-delay="120">
+                        <h3 class="job__role">Desarrollador Backend</h3>
+                        <p class="job__company">Constructora GCG</p>
+                        <ul>
+                            <li>Construcción de servicios y modelos de datos.</li>
+                            <li>Jefe inmediato: Miguel Oliva.</li>
+                            <li>Tecnologías: Angular, Node.js y MongoDB.</li>
+                        </ul>
+                    </article>
 
-    
-        <h2 class="work">Trabajos</h2>
-    <ul class="card">
+                    <article class="job" data-reveal data-delay="240">
+                        <h3 class="job__role">Mesero</h3>
+                        <p class="job__company">El Mejor Gusto de Suba</p>
+                        <ul>
+                            <li>Atención al cliente y trabajo en equipo.</li>
+                            <li>Referencia: Olga Marina Gaona.</li>
+                        </ul>
+                    </article>
 
-        <l1 class="list_trabajo">
+                </div>
+            </div>
+        </section>
 
-            <h2>Desarrolador web Backend</h2>
-            <p> Empresa: Constructora GCG </p>
-            <p>Jefe Inmediato: Miguel oliva </p>
-            <p>Tecnologia: Angular, Node.js, Mongo,DB.</p>
-            
-        </l1>
-        <l1 class="list_trabajo">
-
-           <h2>Mesero</h2>
-            <p> El Mejor Gusto De Suba </p>
-            <p> Jefe Inmediato: Olga Marina Gaona </p>
-          
-
-        </l1>
-        <l1 class="list_trabajo">
-
-            <h2>Desarrolador Web Jr</h2>
-            <p> Empresa: Nuawi </p>
-            <p> Jefe Inmediato: Daniel Millan</p>
-            <p>Tecnologia: Angular, Node.js, Mongo,DB, React.</p>
-
-        </l1>
-
-    </ul>
-
-   </div>
-
-  
-
-
-   </section>
+        <section class="section--tight container">
+            <div class="cta" data-reveal>
+                <div class="cta__glow" aria-hidden="true"></div>
+                <div class="cta__text">
+                    <h2>¿Quieres conocer más de mi perfil?</h2>
+                    <p>Descarga de información, proyectos o propuestas: escríbeme y te respondo pronto.</p>
+                </div>
+                <a class="btn btn--red btn--lg" href="./contacto.html">Contactarme</a>
+            </div>
+        </section>
 
     </main>
 
-    <footer>
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="../img/logo.svg" alt="">
+                        <span>Yimmy.dev</span>
+                    </div>
+                    <p class="footer-text">
+                        Portafolio de Yimmy Alexander Pulido Gaona — Desarrollador de software.
+                        Diseño y construyo experiencias web.
+                    </p>
+                </div>
 
-         <p class="foot">Email: yimmy120alexander@hotmail.com,  Telefono: 3209394803   </p> 
+                <div>
+                    <h3 class="footer-title">Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./estudios.html">Estudios</a></li>
+                        <li><a href="./gallery.html">Proyectos</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <span>
+                                yimmy120alexander@hotmail.com
+                                <button class="copy-btn" type="button" data-copy="yimmy120alexander@hotmail.com">copiar</button>
+                            </span>
+                        </li>
+                        <li><a href="tel:+573209394803">+57 320 939 4803</a></li>
+                        <li><a href="https://wa.me/573209394803" target="_blank" rel="noopener">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span data-year>2026</span> Yimmy A. Pulido Gaona — Todos los derechos reservados.</p>
+                <p><span class="dot">●</span> Hecho con HTML, CSS y JavaScript</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- ============ TOAST ============ -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ============ TO TOP ============ -->
+    <button class="totop" id="toTop" type="button" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+    </button>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

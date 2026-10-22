@@ -1,86 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafoliot</title>
+    <meta name="description" content="Contacta a Yimmy Alexander Pulido Gaona — desarrollador de software. Formulario, correo y WhatsApp.">
+    <meta name="theme-color" content="#0a0a0b">
+    <title>Contacto · Yimmy A. Pulido — Portafolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Montenegrin+Gothic+One&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    
-    <header class="header">
 
-        <nav class="menu">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
 
-            <img class="logo" src="../img/logo.svg" alt="">
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <span class="preloader__text">Yimmy.dev</span>
+        <div class="preloader__bar"><i></i></div>
+    </div>
 
-            <ul class="menu_list">
-                
-               <li>
-                   <img class="icon" src="../img/home.svg" alt="icono home"> <a  href="../index.html" class="menu_link">Home</a>
-                   
-                </li>
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+        <div class="nav__inner container">
+            <a class="nav__logo" href="../index.html" aria-label="Inicio">
+                <img class="nav__logo-img" src="../img/logo.svg" alt="Logo de Yimmy Pulido">
+                <span class="nav__logo-text">Yimmy<small>.dev</small></span>
+            </a>
 
-                  <li>
-                   <img class="icon" src="../img/estudios.svg" alt="icono estudios"> <a  href="./estudios.html" class="menu_link">Estudios</a>
-                   
-                </li>
+            <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
+                <a class="nav__link" href="../index.html">Inicio</a>
+                <a class="nav__link" href="./estudios.html">Estudios</a>
+                <a class="nav__link" href="./gallery.html">Proyectos</a>
+                <a class="nav__link" href="./contacto.html">Contacto</a>
+            </nav>
 
-                <li>
-                   <img class="icon" src="../img/gallery.svg" alt="icono galeria"> <a href="./gallery.html" class="menu_link">Proyectos</a>
-                </li>
-
-                <li>
-                 <img class="icon" src="../img/contact.svg" alt="icono contactame">  <a href="./contacto.html" class="menu_link">Contacto</a>
-                </li>
-
-            </ul>
-        </nav>
-
+            <div class="nav__actions">
+                <a class="btn btn--red btn--sm" href="./contacto.html">Escríbeme</a>
+                <button class="nav__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
     </header>
-    
-    <main>
 
-        <div class="titulo">
-        <h1 class="titulo">Contactame</h1>
-        
-        <a target="_blank" href="https://wa.me/573209394803">
-        <img class="img_contacto" src="https://cdn.pixabay.com/photo/2019/11/05/00/53/cellular-4602489_1280.jpg" alt="">
-        </a>
+    <main id="main">
 
-        </div>
-       <form>
+        <section class="page-head container" data-reveal>
+            <p class="section__eyebrow"><span class="dot"></span> Hablemos</p>
+            <h1 class="section__title">Contác<span class="accent">tame</span></h1>
+            <p class="section__desc">¿Tienes un proyecto, una propuesta o simplemente quieres saludar? Completa el formulario o escríbeme directamente.</p>
+        </section>
 
-        <div class="field">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" placeholder="Tu Nombre">
-        </div>
+        <section class="section">
+            <div class="container contact-layout">
 
-         <div class="field">
-            <label for="email">Correo:</label>
-            <input type="email" id="email" name="email" placeholder=" Example123@gmail.com">
-        </div>
+                <!-- Formulario -->
+                <div class="form-card" data-reveal>
+                    <h2>Envíame un mensaje</h2>
+                    <p>Los campos marcados con <span class="mono accent">*</span> son obligatorios.</p>
 
-         <div class="field">
-            <label for="phone">numero de telefono:</label>
-            <input type="number" id="phone" name="phone" placeholder="Escribe Tu Numero">
-        </div>
+                    <form data-contact-form novalidate>
 
-        <div class="campo">
+                        <div class="field">
+                            <label for="name">Nombre <span class="req">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre completo" autocomplete="name" aria-describedby="error-name">
+                            <span class="field__error" id="error-name" data-error-for="name"></span>
+                        </div>
 
-            <button>Enviar</button>
-        </div>
+                        <div class="field">
+                            <label for="email">Correo electrónico <span class="req">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" autocomplete="email" aria-describedby="error-email">
+                            <span class="field__error" id="error-email" data-error-for="email"></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Opcional — 320 000 0000" autocomplete="tel" aria-describedby="error-phone">
+                            <span class="field__error" id="error-phone" data-error-for="phone"></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Mensaje <span class="req">*</span></label>
+                            <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto o idea..." aria-describedby="error-message"></textarea>
+                            <span class="field__error" id="error-message" data-error-for="message"></span>
+                        </div>
+
+                        <button class="btn btn--red btn--lg" type="submit">Enviar mensaje</button>
+
+                        <div class="form-success" data-form-success hidden>
+                            <h3>¡Mensaje listo!</h3>
+                            <p>Se ha preparado tu mensaje. Ábrelo en tu aplicación de correo para enviarlo, o escríbeme por WhatsApp.</p>
+                            <a data-mailto href="#">Abrir en mi correo →</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Datos de contacto -->
+                <aside class="contact-aside" data-reveal data-delay="140">
+
+                    <div class="info-card">
+                        <div class="info-card__icon">@</div>
+                        <div>
+                            <h3>Correo</h3>
+                            <a href="mailto:yimmy120alexander@hotmail.com">yimmy120alexander@hotmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card__icon">#</div>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <a href="tel:+573209394803">+57 320 939 4803</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card__icon">W</div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/573209394803" target="_blank" rel="noopener">Escribir por WhatsApp →</a>
+                        </div>
+                    </div>
+
+                    <div class="availability">
+                        <h3>Disponibilidad</h3>
+                        <p>Abierto a prácticas, proyectos freelance y oportunidades como desarrollador de software. Tiempo de respuesta habitual: menos de 24 horas.</p>
+                    </div>
+
+                </aside>
+
+            </div>
+        </section>
 
     </main>
 
-    <footer>
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="../img/logo.svg" alt="">
+                        <span>Yimmy.dev</span>
+                    </div>
+                    <p class="footer-text">
+                        Portafolio de Yimmy Alexander Pulido Gaona — Desarrollador de software.
+                        Diseño y construyo experiencias web.
+                    </p>
+                </div>
 
-       <p class="foot">Email: yimmy120alexander@hotmail.com,  Telefono: 3209394803   </p> 
+                <div>
+                    <h3 class="footer-title">Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./estudios.html">Estudios</a></li>
+                        <li><a href="./gallery.html">Proyectos</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <span>
+                                yimmy120alexander@hotmail.com
+                                <button class="copy-btn" type="button" data-copy="yimmy120alexander@hotmail.com">copiar</button>
+                            </span>
+                        </li>
+                        <li><a href="tel:+573209394803">+57 320 939 4803</a></li>
+                        <li><a href="https://wa.me/573209394803" target="_blank" rel="noopener">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span data-year>2026</span> Yimmy A. Pulido Gaona — Todos los derechos reservados.</p>
+                <p><span class="dot">●</span> Hecho con HTML, CSS y JavaScript</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- ============ TOAST ============ -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ============ TO TOP ============ -->
+    <button class="totop" id="toTop" type="button" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+    </button>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>
-

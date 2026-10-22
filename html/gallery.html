@@ -1,104 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <meta name="description" content="Proyectos de Yimmy Alexander Pulido Gaona — desarrollo web, aplicaciones y trabajos de diseño.">
+    <meta name="theme-color" content="#0a0a0b">
+    <title>Proyectos · Yimmy A. Pulido — Portafolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Montenegrin+Gothic+One&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/general.css">
-   
+    <link rel="stylesheet" href="../css/gallery.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    
-    <header class="header">
 
-        <nav class="menu">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
 
-            <img class="logo" src="../img/logo.svg" alt="">
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <span class="preloader__text">Yimmy.dev</span>
+        <div class="preloader__bar"><i></i></div>
+    </div>
 
-            <ul class="menu_list">
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+        <div class="nav__inner container">
+            <a class="nav__logo" href="../index.html" aria-label="Inicio">
+                <img class="nav__logo-img" src="../img/logo.svg" alt="Logo de Yimmy Pulido">
+                <span class="nav__logo-text">Yimmy<small>.dev</small></span>
+            </a>
 
-              <li>
-                   <img class="icon" src="../img/home.svg" alt="icono home"> <a  href="../index.html" class="menu_link">Home</a>
-                   
-                </li>
+            <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
+                <a class="nav__link" href="../index.html">Inicio</a>
+                <a class="nav__link" href="./estudios.html">Estudios</a>
+                <a class="nav__link" href="./gallery.html">Proyectos</a>
+                <a class="nav__link" href="./contacto.html">Contacto</a>
+            </nav>
 
-                  <li>
-                   <img class="icon" src="../img/estudios.svg" alt="icono estudios"> <a  href="./estudios.html" class="menu_link">Estudios</a>
-                   
-                </li>
-
-                <li>
-                   <img class="icon" src="../img/gallery.svg" alt="icono galeria"> <a href="./gallery.html" class="menu_link">Proyectos</a>
-                </li>
-
-                <li>
-                 <img class="icon" src="../img/contact.svg" alt="icono contactame">  <a href="./contacto.html" class="menu_link">Contacto</a>
-                </li>
-
-            </ul>
-        </nav>
-
+            <div class="nav__actions">
+                <a class="btn btn--red btn--sm" href="./contacto.html">Escríbeme</a>
+                <button class="nav__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
     </header>
-    
-    <main>
-        
-        <h1 class="tituloPrincipal">Mis proyectos</h1> 
 
-            <section class="container">
+    <main id="main">
 
-                <div class="card">
-                    
-                <figure>
-                    <img class="image" src="https://img.magnific.com/vector-gratis/awesome-scribble-hand-drawn-doodle-tattoo-element-vector-vector-elementos-tatuaje-dibujado-mano-garabateado_179234-846.jpg?semt=ais_hybrid&w=740&q=80" alt="lobo fiero con color">
-                    <figcaption class="text_img" >Dibujos</figcaption>
-                </figure>
+        <section class="page-head container" data-reveal>
+            <p class="section__eyebrow"><span class="dot"></span> Portafolio</p>
+            <h1 class="section__title">Mis <span class="accent">proyectos</span></h1>
+            <p class="section__desc">Trabajos de desarrollo web, aplicaciones en construcción y proyectos personales donde combino código y creatividad.</p>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <div class="filters" role="group" aria-label="Filtrar proyectos">
+                    <button class="filter-btn is-active" type="button" data-filter="all">Todos</button>
+                    <button class="filter-btn" type="button" data-filter="web">Web</button>
+                    <button class="filter-btn" type="button" data-filter="app">Aplicaciones</button>
+                    <button class="filter-btn" type="button" data-filter="diseno">Diseño</button>
+                    <button class="filter-btn" type="button" data-filter="proximo">Próximamente</button>
+                </div>
+
+                <div class="projects">
+
+                    <article class="project" data-category="web" data-reveal>
+                        <div class="project__media">
+                            <span class="project__badge">Web</span>
+                            <img src="../img/proyecto1.png" alt="Captura de la página de portafolio en desarrollo">
+                        </div>
+                        <div class="project__body">
+                            <h2>Portafolio personal</h2>
+                            <p>
+                                Sitio multipágina con tema oscuro, navegación responsive, animaciones de aparición
+                                y formulario de contacto validado desde cero con JavaScript.
+                            </p>
+                            <ul class="project__tags">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a class="project__link" href="../index.html">Ver proyecto</a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="diseno" data-reveal data-delay="100">
+                        <div class="project__media">
+                            <span class="project__badge project__badge--soft">Hobby</span>
+                            <span class="project__placeholder">✎</span>
+                        </div>
+                        <div class="project__body">
+                            <h2>Dibujo e ilustración</h2>
+                            <p>
+                                Bocetos y dibujos a mano y digitales. Un espacio creativo que alimenta
+                                mi forma de componer color, forma y detalle en la interfaz.
+                            </p>
+                            <ul class="project__tags">
+                                <li>Arte digital</li>
+                                <li>Ilustración</li>
+                            </ul>
+                            <a class="project__link" href="./contacto.html">Pedir un dibujo</a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="app" data-reveal data-delay="180">
+                        <div class="project__media">
+                            <span class="project__badge project__badge--soft">En desarrollo</span>
+                            <span class="project__placeholder">&lt;/&gt;</span>
+                        </div>
+                        <div class="project__body">
+                            <h2>Aplicación web full stack</h2>
+                            <p>
+                                Aplicación con arquitectura cliente-servidor: Angular en el frontend,
+                                Node.js como API REST y MongoDB para el almacenamiento de datos.
+                            </p>
+                            <ul class="project__tags">
+                                <li>Angular</li>
+                                <li>Node.js</li>
+                                <li>MongoDB</li>
+                            </ul>
+                            <a class="project__link" href="./contacto.html">Más información</a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="proximo" data-reveal data-delay="260">
+                        <div class="project__media">
+                            <span class="project__badge project__badge--soft">Próximamente</span>
+                            <span class="project__placeholder">◇</span>
+                        </div>
+                        <div class="project__body">
+                            <h2>Nuevos experimentos</h2>
+                            <p>
+                                Prototipos con inteligencia artificial, animaciones avanzadas en la web
+                                y herramientas de productividad. Esta sección se actualizará pronto.
+                            </p>
+                            <ul class="project__tags">
+                                <li>IA</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a class="project__link" href="./contacto.html">Avísame cuando salga</a>
+                        </div>
+                    </article>
 
                 </div>
 
+                <p class="empty-state" hidden data-empty>No hay proyectos en esta categoría todavía.</p>
 
-                <div class="card">
+            </div>
+        </section>
 
-                    <figure>
-
-                    <img class="image_p" src="../img/proyecto1.png" alt="imagen de pagina de portafolio">
-                     <figcaption class="text_img" >Desarrolo De Portafolio</figcaption>
-                </figure>
-
-                </div>
-
-                <div class="card">
-                    
-                    <figure>
-                    <img class="image" src="https://thumbs.dreamstime.com/b/lobo-fiero-en-pose-din%C3%A1mica-sobre-fondo-blanco-354830340.jpg" alt="lobo fiero con color">
-                     <figcaption class="text_img" >Proximamente</figcaption>
-                </figure>
-
-                </div>
-
-
-                <div class="card">
-
-                    <figure>
-                    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNJDYicfWbseiwYIVQdxTYdVaVMTFO7i09kZC8Emq6VQ&s=10" alt="lobo de colores">
-
-                     <figcaption class="text_img" >Proximamente</figcaption>
-                </figure>
-
-                </div>
-
-
-
-            </section>
     </main>
 
-    <footer>
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="../img/logo.svg" alt="">
+                        <span>Yimmy.dev</span>
+                    </div>
+                    <p class="footer-text">
+                        Portafolio de Yimmy Alexander Pulido Gaona — Desarrollador de software.
+                        Diseño y construyo experiencias web.
+                    </p>
+                </div>
 
-         <p class="foot">Email: yimmy120alexander@hotmail.com, Telefono: 3209394803   </p> 
+                <div>
+                    <h3 class="footer-title">Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./estudios.html">Estudios</a></li>
+                        <li><a href="./gallery.html">Proyectos</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
 
+                <div>
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <span>
+                                yimmy120alexander@hotmail.com
+                                <button class="copy-btn" type="button" data-copy="yimmy120alexander@hotmail.com">copiar</button>
+                            </span>
+                        </li>
+                        <li><a href="tel:+573209394803">+57 320 939 4803</a></li>
+                        <li><a href="https://wa.me/573209394803" target="_blank" rel="noopener">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span data-year>2026</span> Yimmy A. Pulido Gaona — Todos los derechos reservados.</p>
+                <p><span class="dot">●</span> Hecho con HTML, CSS y JavaScript</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- ============ TOAST ============ -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ============ TO TOP ============ -->
+    <button class="totop" id="toTop" type="button" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+    </button>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>
